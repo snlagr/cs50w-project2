@@ -1,2 +1,5 @@
-flask
-flask_socketio
+Flask
+Flask-SocketIO
+gevent
+gevent-websocket
+gunicorn

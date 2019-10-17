@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+### !/usr/bin/env python
 
 import os, time
 from flask import Flask, render_template, redirect, request
@@ -39,4 +39,5 @@ def room_joined(data):
 	emit("cur_messages", messages[data["room"]], broadcast=False)
 
 if __name__ == '__main__':
-	socketio.run(app)
+	app.run()
+	# socketio.run(app)

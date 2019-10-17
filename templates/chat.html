@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ping Me Up!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chat.css') }}">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+        <script src="{{ url_for('static', filename='chat.js') }}"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Nav bar start -->
+            <nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: #66a1ee">
+                <div class="container-fluid">
+                    <div id="show-sidebar-button" class="cursor-pointer">
+                        <span>Rooms</span>
+                    </div>
+                </div>
+            </nav>
+            <!-- Nav bar end -->
+
+            <!-- Main section start -->
+            <div id="main-section">
+
+                <!-- Sidebar start -->
+                <nav id="sidebar">
+                    <h4>Rooms</h4>
+                    {% for room in rooms %}
+                        <p id="{{ room|title }}" class="select-room cursor-pointer">{{ room|title }}</p>
+                    {% endfor %}
+                    <button id="new_room" class="btn btn-warning" type="button">NEW</button>
+                </nav>
+                <!-- Sidebar end -->
+
+                <!-- Rightside pannel start -->
+                <div id="rightside-pannel">
+
+                    <!-- Display message start-->
+                    <div id="display-message-section">
+                    </div>
+                    <!-- Display message end -->
+
+                    <!-- Type message start -->
+                   <div id="input-area" class="input-group mb-3">
+                        <input type="text" id="user_message" class="form-control" placeholder="Type here..." aria-label="Type a message" aria-describedby="basic-addon2" autocomplete="off">
+                        <div class="input-group-append">
+                            <button id="send_message" class="btn btn-warning" type="button">SEND</button>
+                        </div>
+                    </div>
+                    <!-- Type message end -->
+                </div>
+                <!-- Rightside pannel end -->
+            </div>
+            <!-- Main section end -->
+        </div>
+        <!-- Wrapper end -->
+    </body>
+</html>

@@ -1,0 +1,54 @@
+h1 {
+    color: #206ED2;
+}
+
+#main-section {
+    overflow: hidden; /* Makee this div contain its floated children */
+    width: 100%;
+}
+
+.jumbotron {
+    marin-bottom: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#righthand-side {
+    padding: 0 3em 0 3em;
+    overflow: hidden; /* Make this div take up the rest of the horizontal space, and no more */
+}
+
+h2 {
+    color: #5b9cfc;
+}
+
+#righthand-side p {
+    font-size: 0.8em;
+    color: grey;
+}
+
+@media (max-width: 588px) {
+    picture {
+        display: none;
+    }
+    #righthand-side {
+        padding-left: 1.5em;
+    }
+}
+
+@media (min-width: 1000px) {
+    #righthand-side {
+        max-width: 50%;
+    }
+}
+
+.formError {
+    list-style-type:none;
+    padding:0px;
+    color: red;
+}
+
+input[type='text']:focus, input[type='password']:focus {
+    border-color: #ffc107;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 10px #ffc107;
+}​

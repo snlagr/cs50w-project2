@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enter Username</title>
+    <script type="text/javascript" src="{{ url_for('static', filename='login.js') }}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+</head>
+
+<body>
+    <div class="main-section">
+        <div class="jumbotron">
+          <h1 class="display-4">Ping Me Up!</h1>
+        </div>
+
+        <div id="righthand-side">
+
+        <h2>Enter a username</h2>
+        <p>This can't be changed later!</p>
+<form>
+        <input id="inp" autocomplete="off" autofocus="" class="form-control" id="username" name="username" placeholder="Username" required="" type="text" value="">
+        <div class="form-group">
+            <br>
+            <input id="sub" type="submit" value="Create" class="btn btn-warning">
+        </div>
+</form>
+        </div>
+    </div>
+</body>
+
+
+</html>
